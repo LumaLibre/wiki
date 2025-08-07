@@ -1,29 +1,26 @@
 ---
 title: "🕸️ Mob Balls"
 description: "Info on Mob Balls"
-lastUpdated: 2025-8-6
+lastUpdated: 2025-08-06
 ---
 
-
-
 import CenteredImage from "@/components/CenteredImage.astro";
-import ballcraft from "@/assets/crates.jpg";
-import luminballs from "@/assets/crates-view.png";
+import BallRecipe from "@/assets/ballrecipe.png"
+import LSMB from "@/assets/luminshopmb.png"
+import MBC from "@/assets/mobballcapture.gif"
+import MBD from "@/assets/mobballdeploy.gif"
 
-Crates are full of great rewards, with better prizes the higher the tier!
+{/* Sin, Kat, whoever may be reading this, learning how to use MDX took far too much time to do */}
 
-To open a crate, you’ll need a key that matches its tier. The current tiers, ranked least to most
-valuble are:
+Mob balls are a feature in LumaMC where you can buy/craft Mob Balls to capture and release any mobs you may come across!
+To obtain, you can buy mob balls from `/luminshop` for the price of 12 Lumins,
+<CenteredImage src={LSMB} alt="Mob balls avaiable within the /luminshop. The price is set to 12 lumins as of writing." tailwind="w-128" />
 
-**Solara --> Iris --> Azure --> Etherea --> Luma**
+Or if you're Etheral rank ([purchased at the store](https://store.lumamc.net)), you can craft them.
+<CenteredImage src={BallRecipe} alt="Crafting recipe of Mob Balls, eight hay bales surrounding one emerald." tailwind="w-128" />
 
-You can find crates at `/crates`.
+To use, simply right click the entity to capture...
+<CenteredImage src={MBC} alt="Interacting with an entity captures it within a ball." tailwind="w-128"/>
 
-<CenteredImage src={crates} alt="Crates" tailwind="w-160" />
-
-To check the contents of each crate, simply left-click on a crate! To use a crate key, right-click
-on the crate while holding the key in your main hand.
-
-<CenteredImage src={cratesView} alt="Crates View" tailwind="w-100" />
-
-Crate keys can be obtained from voting, daily rewards, server events, and the LumaMC store!
+...And right click the ground to release!
+<CenteredImage src={MBD} alt="Interacting the ground releases the captured entity." tailwind="w-128"/>
