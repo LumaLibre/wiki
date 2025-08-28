@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* Workaround for Starlight docs 'invisible' list styles */
 /* Files which use tailwindcss must use a div with this class before lists */
 .list ul,
