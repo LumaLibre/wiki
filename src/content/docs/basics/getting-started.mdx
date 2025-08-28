@@ -11,8 +11,8 @@ import { CardGrid } from "@astrojs/starlight/components";
 import { Card } from "@astrojs/starlight/components";
 import CenteredImage from "@/components/CenteredImage.astro";
 import rtpMenu from "@/assets/rtp-menu.png";
-import pronounSet from "@/assets/pronouns.png"
-import pronounPreview from "@/assets/pronounsPreview.png"
+import pronounSet from "@/assets/pronouns.png";
+import pronounPreview from "@/assets/pronounsPreview.png";
 
 ## Random Teleports (RTP)
 
@@ -44,13 +44,18 @@ can access the map by typing `/map` in-game or clicking the following the link c
 
 ## Pronouns
 
-LumaMC uses a pronouns feature to show players how you want to be identified as! To start, run `/pronouns set` in-game.
+LumaMC has a pronouns feature to show others how you would like to be identified. To get started,
+use `/pronouns set` in-game.
 
-<CenteredImage src={pronounSet} alt="In-game chat of the command /pronouns set" tailwind="w-84"  />
+<CenteredImage src={pronounSet} alt="In-game chat of the command /pronouns set" tailwind="w-84" />
 
-To view other people's pronouns, hover over their username in chat. 
+To view other people's pronouns, hover over their username anywhere in chat.
 
-<CenteredImage src={pronounPreview} alt="In-game representation of a user's pronouns, 'They/Them'" tailwind="mt-100 w-84" />
+<CenteredImage
+  src={pronounPreview}
+  alt="In-game representation of a user's pronouns, 'they/them'"
+  tailwind="mt-100 w-84"
+/>
 
 ## Chat channels
 

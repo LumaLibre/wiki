@@ -1,26 +1,54 @@
 ---
-title: "🕸️ Mob Balls"
+title: "🥚 Mob Balls"
 description: "Info on Mob Balls"
-lastUpdated: 2025-08-06
+lastUpdated: 2025-08-28
 ---
 
 import CenteredImage from "@/components/CenteredImage.astro";
-import BallRecipe from "@/assets/ballrecipe.png"
-import LSMB from "@/assets/luminshopmb.png"
-import MBC from "@/assets/mobballcapture.gif"
-import MBD from "@/assets/mobballdeploy.gif"
+import mobBallRecipe from "@/assets/ballrecipe.png";
+import luminShopMobBalls from "@/assets/luminshopmb.png";
+import mobBallCapture from "@/assets/mobballcapture.gif";
+import mobBallDeploy from "@/assets/mobballdeploy.gif";
 
-{/* Sin, Kat, whoever may be reading this, learning how to use MDX took far too much time to do */}
+{/* Authored by: @FlameUser706 */}
 
-Mob balls are a feature in LumaMC where you can buy/craft Mob Balls to capture and release any mobs you may come across!
-To obtain, you can buy mob balls from `/luminshop` for the price of 12 Lumins,
-<CenteredImage src={LSMB} alt="Mob balls avaiable within the /luminshop. The price is set to 12 lumins as of writing." tailwind="w-128" />
+## What are Mob Balls?
 
-Or if you're Etheral rank ([purchased at the store](https://store.lumamc.net)), you can craft them.
-<CenteredImage src={BallRecipe} alt="Crafting recipe of Mob Balls, eight hay bales surrounding one emerald." tailwind="w-128" />
+Mob balls are an item that can be used to capture and release mobs anywhere on Luma.
+
+## Obtaining Mob Balls
+
+Mob balls can be obtained a variety of ways, including purchasing them from the `/luminshop` for 12
+lumins each, crafting them with the recipe below _(requires Farmer level 35 or Etheral rank)_, and
+of course, purchasing them from other players!
+
+<CenteredImage
+  src={mobBallRecipe}
+  alt="Crafting recipe of Mob Balls, eight hay bales surrounding one emerald."
+  tailwind="w-128"
+/>
+<br />
+<br />
+<CenteredImage
+  src={luminShopMobBalls}
+  alt="Mob balls available within the `/luminshop`. The price is set to 12 lumins as of writing."
+  tailwind="w-128"
+/>
+
+## Using Mob Balls
 
 To use, simply right click the entity to capture...
-<CenteredImage src={MBC} alt="Interacting with an entity captures it within a ball." tailwind="w-128"/>
 
-...And right click the ground to release!
-<CenteredImage src={MBD} alt="Interacting the ground releases the captured entity." tailwind="w-128"/>
+<CenteredImage
+  src={mobBallCapture}
+  alt="Interacting with an entity captures it within a ball."
+  tailwind="w-128"
+/>
+
+...And right-click the ground to release!
+
+<CenteredImage
+  src={mobBallDeploy}
+  alt="Interacting the ground releases the captured entity."
+  tailwind="w-128"
+/>
