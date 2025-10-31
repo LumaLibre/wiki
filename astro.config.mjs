@@ -7,7 +7,7 @@ import tailwindcss from "@tailwindcss/vite";
 const starlightConfig = {
   favicon: "./favicon.png",
   logo: { src: "@/assets/luma-logo.webp" },
-  title: "Wiki",
+  title: "LumaMC Wiki",
   customCss: ["./src/styles/starlight.css"],
   social: {
     github: "https://github.com/LumaLibre/wiki",
