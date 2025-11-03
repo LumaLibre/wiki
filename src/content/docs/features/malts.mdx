@@ -1,0 +1,165 @@
+---
+title: "📦 Malts"
+description: "Learn about Malts, our vaults plugin that incorporates a warehouse for mass storage."
+lastUpdated: 2025-11-03
+---
+
+import CenteredImage from "@/components/CenteredImage.astro";
+import maltsYourVaults from "@/assets/malts-your-vaults.png";
+import maltsEditVault from "@/assets/malts-edit-vault.png";
+import maltsWarehouse from "@/assets/malts-warehouse.png";
+import maltsWarehouseCompartment from "@/assets/malts-warehouse-compartment.png";
+import maltsWarehouseManage from "@/assets/malts-warehouse-manage.png";
+
+
+## Vaults
+
+Vaults are a special type of container that can be accessed from anywhere on LumaMC. They have up to **54** slots and the amount you 
+have can depend on your rank or other factors.
+
+To access your vaults, use `/malts vaults` or `/pv`. This will bring you into a GUI showing you all your vaults.
+
+
+<CenteredImage src={maltsYourVaults} alt="Your Vaults (Malts)" tailwind="w-140" />
+
+
+From here, you can **left-click** to open your vault, or **right-click** it to modify its `name`, `icon`, and `trusted players`.
+
+
+### Editing your Vault
+
+
+<CenteredImage src={maltsEditVault} alt="Edit Vault (Malts)" tailwind="w-140" />
+
+#### With the 'Edit Vault' GUI open...
+
+<div class="list">
+- **Changing the of your vault:** To change the name of your vault, click the `Change Name` button presented in the GUI. 
+After selecting, enter the *new* name of your vault in chat.
+
+- **Changing the icon of your Vault:** To change the icon of your vault, first click the `Change Icon` button presented in the GUI. 
+While highlighted, select another item in your inventory. 
+After selecting, the icon of your vault will be changed to the item your selected!
+
+- **Adding trusted players to your vault:** To add trusted players to your vault, click the `Edit Trust List` button presented in the GUI.
+After selecting, enter the *username* of the player you wish to add in chat. Trusted players will be able to access and modify the contents of your vault.
+Two players may **not** open the same vault at the same time. Malts will prioritize the player who opened the vault first and not let others access it until it is closed.
+
+- **Removing trusted players from your vault:** To remove trusted players from your vault, click the `Edit Trust List` button presented in the GUI.
+After selecting, enter the *username* of the player you wish to remove in chat.
+</div>
+
+
+### Quick-return
+
+To quickly return to your list of vaults from within a vault, simply **right-click** anywhere outside of your vault's inventory.
+You can set your quick-return's click preference with `/malts quickreturn <left|middle|right|none>`.
+
+
+### The Quick-bar
+
+The quick-bar is an additional feature of malts that appears when you have compartments in your warehouse. The quick-bar allows you to quickly deposit or withdraw items from your warehouse without needing to open it.
+The quickbar appears on the bottom row of the main `Your Vaults` GUI and will show the **8** most recently used compartments from your warehouse.
+
+
+### Accessing other players' Vaults
+
+If you have permission to access another player's vault, you can do so by using `/malts vaultother <player>` or `/pvo <player>`. This will open a GUI showing you all the vaults the player has trusted you to.
+
+
+## Warehouses
+
+Warehouses are mass storage containers that can hold a variable amount of items depending on how much **stock** you have. 
+Warehouses can be accessed from anywhere on LumaMC using `/malts warehouse` or `/wh`.
+
+
+<div class="list">
+* Please note: Warehouses cannot be accessed if you have **0 stock**, 
+you will need to be at least rank **Serene**, **Arcane**, or have obtained 
+warehouse stock through other means to access your warehouse.
+</div>
+
+
+<CenteredImage src={maltsWarehouse} alt="Warehouse (Malts)" tailwind="w-140" />
+
+
+### Compartments
+
+Your warehouse is divided into compartments, each compartment contributes to your total stock. 
+You can hold as many items as your total stock allows in a single compartment. 
+(e.g. If you have **100 stock**, you could hold 100 potatoes in a single compartment.)
+
+
+To create a compartment, **left-click** the `Manage Warehouse` button in your warehouse. After selecting, your manager button will be highlighted.
+While highlighted, select an item in your inventory to create a compartment for that item. There are no limits to how many compartments you can have.
+
+
+To remove a compartment, **right-click** the `Manage Warehouse` in your warehouse. After selecting, your manager button will be highlighted.
+While highlighted, select a compartment in your warehouse to remove it. If the stock of the compartment is not **0**, you won't be able to remove it.
+
+
+### Stock
+
+Your warehouse's maximum stock determines how many items you can hold in total across all compartments.
+You can check your warehouse's maximum stock by hovering over the `Warehouse Information` icon in the bottom right corner of your warehouse.
+
+
+<CenteredImage src={maltsWarehouseCompartment} alt="Warehouse Compartment (Malts)" tailwind="w-140" />
+
+
+#### Actions
+
+<div class="list">
+- **Shift + right-click:** To add all the items matching the compartment in your inventory to the selected compartment.
+- **Shift + left-click:** To remove all the items matching the compartment from the selected compartment to your inventory.
+- **Right-click:** To remove a stack of items from the selected compartment to your inventory.
+- **Left-click:** To remove a single item from the selected compartment to your inventory.
+</div>
+
+
+### Modes
+
+Warehouse modes enable extra functionality for your warehouse such as, automatically adding items to your warehouse when you pick them up
+or automatically replenishing items from your warehouse when you use them.
+
+
+To change your warehouse's mode, **shift + left-click** the `Manage Warehouse` button in your warehouse. This will cycle through all modes available to you.
+You may only have one mode active at a time.
+
+<div class="list">
+* Please note: Warehouse modes must be unlocked through ranks, job perks, or other means and are not available by default.
+</div>
+
+#### Available Modes
+
+<div class="list">
+- **Auto Store:** Automatically adds items to your warehouse when you pick them up off the ground.
+- **Auto Replenish:** Automatically takes blocks or consumables from your warehouse when you're running low on them.
+- **Click to Deposit:** Allows you to deposit items from your warehouse into a container by **left-clicking** on the container
+with an item matching a compartment in your warehouse.
+</div>
+
+
+<CenteredImage src={maltsWarehouseManage} alt="Manage Warehouse (Malts)" tailwind="w-140" />
+
+
+## Commands
+
+Malts provides several commands to help you manage your vaults and warehouse with ease. 
+Below is a list of available commands and their aliases.
+
+
+**- ?** indicates that the argument is optional.
+
+
+<div class="list">
+- `/malts vaults <i?>` | `/pv <i?>`, `/vault <i?>`, `/vaults <i?>`, `/chest <i?>` : Opens your vaults GUI or a specific vault if one is provided.
+
+- `/malts warehouse <i?>` | `/wh`, `/warehouse`, `/es` : Opens your warehouse GUI or a specific warehouse if one is provided.
+
+- `/malts vaultother <player> <i?>` | `/pvo <player> <i?>`, `/vaultother <player> <i?>`, `/vaultsother <player> <i?>`, `/chestother <player> <i?>` : Opens another player's vaults GUI or a specific vault if one is provided.
+
+- `/malts vaultname` | `/pvn <name>`, `/vaultname <name>`, `/chestname <name>` : Opens a vault by its name instead of its ID.
+
+- `/malts quickreturn <left|middle|right|none>` : Sets your quick-return click preference.
+</div>
