@@ -15,6 +15,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear Yarn cache
+        run: rm -rf ~/.cache/yarn
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: Checkout your repository using git
         uses: actions/checkout@v4
       - name: Install, build, and upload your site
