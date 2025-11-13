@@ -5,7 +5,6 @@ on:
     branches: [master]
   workflow_dispatch:
 
-# Allow this job to clone the repo and create a page deployment
 permissions:
   contents: read
   pages: write
@@ -14,18 +13,29 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Clear Yarn cache
         run: rm -rf ~/.cache/yarn
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-      - name: Install, build, and upload your site
-        uses: withastro/action@v4
+          cache: "yarn"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Astro site
+        run: yarn build
+
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          package-manager: yarn
+          path: dist
 
   deploy:
     needs: build
