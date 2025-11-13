@@ -10,6 +10,7 @@ import maltsEditVault from "@/assets/malts-edit-vault.png";
 import maltsWarehouse from "@/assets/malts-warehouse.png";
 import maltsWarehouseCompartment from "@/assets/malts-warehouse-compartment.png";
 import maltsWarehouseManage from "@/assets/malts-warehouse-manage.png";
+import maltsSearch from "@/assets/malts-search.png";
 
 
 ## Vaults
@@ -26,7 +27,7 @@ To access your vaults, use `/malts vaults` or `/pv`. This will bring you into a 
 From here, you can **left-click** to open your vault, or **right-click** it to modify its `name`, `icon`, and `trusted players`.
 
 
-### Editing your Vault
+### Editing your vault
 
 
 <CenteredImage src={maltsEditVault} alt="Edit Vault (Malts)" tailwind="w-140" />
@@ -66,6 +67,14 @@ The quickbar appears on the bottom row of the main `Your Vaults` GUI and will sh
 
 If you have permission to access another player's vault, you can do so by using `/malts vaultother <player>` or `/pvo <player>`. This will open a GUI showing you all the vaults the player has trusted you to.
 
+
+### Vault searching
+
+You can search your vaults for specific items using `/malts search <query>` or `/pvsearch <query>`. This will show a chat message with all the locations of items matching your query in your vaults.
+You may hover over a particular item to see its description as it appears in your vault or, click on it to open the vault containing the item. Clicking the arrows towards the bottom of the message
+will allow you to cycle through multiple pages of results if necessary.
+
+<CenteredImage src={maltsSearch} alt="Search Vaults (Malts)" tailwind="w-140" />
 
 ## Warehouses
 
@@ -164,4 +173,6 @@ Below is a list of available commands and their aliases.
 - `/malts vaultname` | `/pvn <name>`, `/vaultname <name>`, `/chestname <name>` : Opens a vault by its name instead of its ID.
 
 - `/malts quickreturn <left|middle|right|none>` : Sets your quick-return click preference.
+
+- `/malts search <query> -page <i?> -player <otherPlayer?>` | `/pvsearch <query> -page <i?> -player <otherPlayer?>` `/pvs <query> -page <i?> -player <otherPlayer?>`, `/chestsearch <query> -page <i?> -player <otherPlayer?>` : Searches your vaults for items matching the query.
 </div>
