@@ -6,43 +6,6 @@ sidebar:
   order: 8
 ---
 
-import { Aside } from "@astrojs/starlight/components";
+Luma ensures a lag-free experience by running a fork of [Folia](https://papermc.io/software/folia/).
 
-To ensure a fair experience and also prevent lag from being a concern on Luma, we must enforce hard
-limits on entities and certain block types. The limits for each are listed below.
-
-## Entity Limits
-
-<Aside>
-  A group is defined as a collection of entities within a specific radius. Example: A group of 10
-  zombies spread out 8 blocks away from a group of 20 zombies wouldn't be trimmed but a group of 30
-  zombies would.
-</Aside>
-
-<div class="list">
-
-- Common mobs (animals, monsters, fish, ambient, raiders) are all limited under a **25** group limit
-  per `14` blocks.
-- Domestic mobs (villagers, tameables, golems) are all limited under a **45** group limit per `6`
-  blocks.
-- Vehicle entities (minecarts, hopper minecarts, boats) are all limited under a **15** limit per
-  `20` blocks.
-
-</div>
-
-## Block Limits
-
-<Aside>
-  A chunk is a 16x320x16 region spread out across all worlds in Minecraft. You can see individual
-  chunks by enabling the F3+G debug menu.
-</Aside>
-
-<div class="list">
-
-- Redstone blocks are limited under a **90** block limit per `chunk`.
-- Beds are limited under a **20** block limit per `chunk`.
-- Hoppers are limited under a **25** block limit per `chunk`.
-- Tiles are limited under a **256** block limit per `chunk`.
-- Spawners are limited under an **8** block limit per `chunk`.
-
-</div>
+We do not impose any hard limits on entities or block types. Simulation distance is **6** and view distance is **11**. Have fun!
