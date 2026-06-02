@@ -1,0 +1,43 @@
+---
+title: "📋 Player Warps"
+description: "Info about Player Warps"
+lastUpdated: 2026-06-02
+sidebar:
+  order: <x>
+---
+
+# TODO: Add new images for the pw gui
+# Consider moving page to 'features' based on information density
+
+import CenteredImage from "@/components/CenteredImage.astro";
+import { Aside } from "@astrojs/starlight/components";
+import auctionHouse from "@/assets/auction-house.png"; 
+import chestshop from "@/assets/chest-shops.png";
+
+## Player Warps
+
+<Aside>
+  To create your own pwarp, you must be at least *Quantum* rank!
+</Aside>
+
+The player warp GUI is accessible with the `/pw` command. It allows players to browse and search public warps to find shops, farms, art galleries, and more!
+You may also skip the navigation GUI and teleport directly to a pwarp that you know the name of with `/pw <warpname>`.
+
+<CenteredImage src={auctionHouse} alt="Player Warp GUI" tailwind="w-82" />
+
+## Player Warps GUI
+
+The `/pw` navigation UI provides a convenient resource for the advertisement and access of player-created warps. It contains several key features:
+-Browse all Warps -
+-View Favorites
+-View Recents
+-Browse by category
+-Advertise your warp
+
+<CenteredImage src={chestshop} alt="Pwarp Rating" tailwind="w-8/10" />
+
+### PW Management CMDs
+
+todo todo
+
+
