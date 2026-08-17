@@ -34,7 +34,7 @@ const starlightConfig = {
     },
     {
       label: "Lumapedia",
-      autogenerate: { directory: "Lumapedia" },
+      autogenerate: { directory: "lumapedia" },
     },
   ],
 };
