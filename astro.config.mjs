@@ -33,8 +33,8 @@ const starlightConfig = {
       autogenerate: { directory: "features" },
     },
     {
-      label: "LumaGear",
-      autogenerate: { directory: "lumagear" },
+      label: "Lumapedia",
+      autogenerate: { directory: "Lumapedia" },
     },
   ],
 };
