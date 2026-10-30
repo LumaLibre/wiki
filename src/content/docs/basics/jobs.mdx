@@ -14,7 +14,10 @@ specific tasks in-game.
 
 Choose a job to kickstart your earnings! Use the `/jobs` command to select a job that aligns with
 your skills and interests! To generate income through jobs, simply perform job-specific actions,
-like breaking stone or ores for the **Miner** job.
+like breaking stone or ores for the **Miner** job. Jobs save progress upon leaving, which can be 
+done at any time using '/jobs leave <jobname>', so don't be afraid to experiment!
+
+Keep in mind there will be a 40-hour cooldown for rejoining the same job after leaving it.
 
 <CenteredImage src={jobsMenu} alt="In-game Jobs Menu" tailwind="w-80" />
 
@@ -50,6 +53,26 @@ Here are all the available job types!
 
 </div>
 
+## Managing Job Blocks
+
+Each player has a maximum allowance of job blocks that can contribute to job earnings and experience. 
+Applicable blocks (see below) are claimed upon placing or on first interaction, and each job block can
+only belong to a single player. These blocks may be placed in amounts exceeding the job block limit, but 
+will not provide job payouts if used as such. Job blocks can be removed by breaking them or by using the
+command `/jobs clearownership`.
+
+Here are the default job block limits!
+
+<div class="list">
+
+-  **Furnace**: 20
+-  **Brewing Stand**: 20
+-  **Smoker**: 10
+-  **Blast Furnace**: 10 
+
+
+</div>
+
 ## Job Commands
 
 Here's a list of useful job commands!
@@ -62,7 +85,8 @@ Here's a list of useful job commands!
 - `/jobs leave <jobname>` - Leave a job.
 - `/jobs gtop` - Shows jobs global leaderboard.
 - `/jobs top <jobname>` - Views job leaderboard for a specific job.
-- `/jobs stats <player?>` - View yours or another player's job levels.
+- `/jobs stats <player?>` - View yours or another player's equipped job levels.
+- `/jobs archive <player?>` - View yours or another player's unequipped job levels.
 - `/jobs info <jobname>` - View information about a specific job.
 - `/jobs clearownership` - Clears all owned job blocks (e.g. Owned furnaces, brewing stands, etc.)
 
